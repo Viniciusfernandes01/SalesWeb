@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Sales.Models;
+using Sales.Models.ViewModels;
 
 namespace Sales.Controllers
 {
@@ -17,6 +17,12 @@ namespace Sales.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewData["message"] = "Mensagem pra ti!";
             return View();
         }
 
